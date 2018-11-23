@@ -1,0 +1,41 @@
+.container{
+    display: grid;
+    color: #ffffff;
+    text-align: center;
+}
+
+.box1 {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+}
+
+.box2 {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(175, 173, 36);
+}
+
+.box3 {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(66, 189, 93);
+}
+
+.box4 {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255, 81, 0);
+}
+
+.box5 {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(206, 64, 118);
+}
+
+.box6 {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(58, 58, 70);
+}

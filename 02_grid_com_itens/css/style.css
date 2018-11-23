@@ -1,0 +1,77 @@
+.container{
+    display: grid;
+    grid-template-columns: 100px 50px 80px 200px; 
+    grid-template-rows: 80px 100px 100px;
+    /* Declaração abreviada dos templates rows e columns
+        grid-template: 80px 100px 100px / 100px 50px 80px 200px;
+    */
+    column-gap: 20px;
+    row-gap:10px ;
+    /*  grid-row-gap: ;
+        grid-column-gap: ;
+    * Declaração abreviada das gaps rows e columns R>C
+        grid-gap: 20px 10px; 
+    *  Define espaçamento igual para rows e columns 
+        grid-gap: 10px;
+    *  Define espaçamento apenas para as columns
+        grid-gap: 0 10px;
+    *  Propriedades atuais gap, column-gap, row-gap
+    */
+    
+}
+
+.box{
+    
+    color: #ffffff;
+    text-align: center;
+    border: 1px solid #c5c2c2;
+    border-radius: 10px;
+}
+
+.box1 {
+    background-color: blue;
+}
+
+.box2 {
+    background-color: rgb(175, 173, 36);
+}
+
+.box3 {
+    background-color: rgb(66, 189, 93);
+}
+
+.box4 {
+    background-color: rgb(255, 81, 0);
+}
+
+.box5 {
+    background-color: rgb(206, 64, 118);
+}
+
+.box6 {
+    background-color: rgb(58, 58, 70);
+}
+
+.box7 {
+    background-color: rgb(109, 109, 196);
+}
+
+.box8 {
+    background-color: rgb(54, 100, 98);
+}
+
+.box9 {
+    background-color: rgb(165, 109, 25);
+}
+
+.box10 {
+    background-color: rgb(179, 49, 66);
+}
+
+.box11 {
+    background-color: rgb(36, 109, 18);
+}
+
+.box12 {
+    background-color: rgb(25, 121, 165);
+}
