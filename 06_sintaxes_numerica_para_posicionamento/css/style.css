@@ -1,0 +1,36 @@
+.container {
+    display: grid;
+    grid-template-columns: 150px 700px 150px;
+    grid-template-rows: 60px 40px 200px 60px;
+    grid-gap: 5px 10px;
+}
+
+.header {
+    grid-area: 1 / 1 / 2 / 4;
+    background-color: rgb(25, 121, 165);
+}
+
+.menu {
+    grid-area: 2 / 1 / 3 / 4;
+    background-color: rgb(175, 173, 36);
+}
+
+.content {
+    grid-area: 3 / 2 / 4 / 3;
+    background-color: rgb(66, 189, 93);
+}
+
+.lateral-um {
+    grid-area: 3 / 1 / 4 / 2;
+    background-color: rgb(238, 128, 77);
+}
+
+.lateral-dois {
+    grid-area: 3 / 3 / 4 / 4;
+    background-color: rgb(204, 82, 129);
+}
+
+.footer {
+    grid-area: 4 / 1 / 5 / 4;
+    background-color: rgb(165, 109, 25);
+}
