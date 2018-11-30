@@ -1,0 +1,41 @@
+body {
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: [inicio] 150px [f-primaria i-content] 700px [f-content i-secundaria] 150px [fim];
+    grid-template-rows: [inicio] 60px [f-header i-menu] 40px [f-menu i-3col] 200px [f-3col i-rodape] 60px [fim];
+    grid-gap: 5px 10px;
+}
+
+/* Ordem da GRID AREA - grid-row-start > grid-column-start > grid-row-end > grid-column-end */
+.header {
+    grid-area: inicio / inicio / f-header / fim;
+    background-color: rgb(25, 121, 165);
+}
+
+.menu {
+    grid-area: i-menu / inicio / f-menu / fim;
+    background-color: rgb(175, 173, 36);
+}
+
+.content {
+    grid-area: i-3col / i-content / f-3col / f-content;
+    background-color: rgb(66, 189, 93);
+}
+
+.lateral-um {
+    grid-area: i-3col / inicio / f-3col / f-primaria;
+    background-color: rgb(238, 128, 77);
+}
+
+.lateral-dois {
+    grid-area: i-3col / i-secundaria / f-3col / fim;
+    background-color: rgb(204, 82, 129);
+}
+
+.footer {
+    grid-area: i-rodape / inicio / fim / fim;
+    background-color: rgb(165, 109, 25);
+}
