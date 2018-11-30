@@ -1,0 +1,45 @@
+body {
+    text-align: center;
+}
+
+div * {
+    border: solid 4px #000000;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px 200px 200px;
+    grid-template-rows: 100px 100px 100px 100px;
+    grid-gap: 5px 10px;
+}
+
+.c1 {
+    grid-column: span 4 / -1;
+    grid-row: span 3 / 5;
+    background-color: rgb(25, 121, 165);
+}
+
+.c2 {
+    display: none;
+    background-color: rgb(175, 173, 36);
+}
+
+.c3 {
+    display: none;
+    background-color: rgb(66, 189, 93);
+}
+
+.c4 {
+    display: none;
+    background-color: rgb(238, 128, 77);
+}
+
+.c5 {
+    display: none;
+    background-color: rgb(204, 82, 129);
+}
+
+.c6 {
+    display: none;
+    background-color: rgb(165, 109, 25);
+}

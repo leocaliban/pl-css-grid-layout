@@ -1,0 +1,45 @@
+body {
+    text-align: center;
+}
+
+div * {
+    border: solid 4px #000000;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: [inicio] 150px [f-primaria i-content] 750px [f-content i-secundaria] 150px [fim];
+    grid-template-rows: [inicio] 60px [f-header i-menu] 40px [f-menu i-3col] 200px [f-3col i-rodape] 60px [fim];
+    grid-gap: 5px 10px;
+}
+
+.c1 {
+    grid-column: i-content / span 1;
+    background-color: rgb(25, 121, 165);
+}
+
+.c2 {
+    grid-column: i-secundaria / span 1;
+    grid-row: i-3col / span 2;
+    background-color: rgb(175, 173, 36);
+}
+
+.c3 {
+    display: none;
+    background-color: rgb(66, 189, 93);
+}
+
+.c4 {
+    display: none;
+    background-color: rgb(238, 128, 77);
+}
+
+.c5 {
+    display: none;
+    background-color: rgb(204, 82, 129);
+}
+
+.c6 {
+    display: none;
+    background-color: rgb(165, 109, 25);
+}
