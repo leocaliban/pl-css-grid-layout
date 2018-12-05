@@ -1,0 +1,45 @@
+body {
+    text-align: center;
+}
+
+div * {
+    border: solid 4px #000000;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 200px 700px 200px;
+    grid-template-rows: 60px 40px 200px 60px;
+    grid-template-areas: "header header header" "menu menu menu" "lateral-um content lateral-dois" "footer footer footer";
+    grid-gap: 5px 10px;
+}
+
+.header {
+    grid-area: header;
+    background-color: rgb(25, 121, 165);
+}
+
+.menu {
+    grid-area: menu;
+    background-color: rgb(175, 173, 36);
+}
+
+.content {
+    grid-area: content;
+    background-color: rgb(66, 189, 93);
+}
+
+.lateral-um {
+    grid-area: lateral-um;
+    background-color: rgb(238, 128, 77);
+}
+
+.lateral-dois {
+    grid-area: lateral-dois;
+    background-color: rgb(204, 82, 129);
+}
+
+.footer {
+    grid-area: footer;
+    background-color: rgb(165, 109, 25);
+}
