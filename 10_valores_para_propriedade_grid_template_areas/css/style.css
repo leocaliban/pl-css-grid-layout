@@ -1,0 +1,41 @@
+body {
+    text-align: center;
+}
+
+div * {
+    border: solid 4px #000000;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: 
+        "area1 area2 area3" 
+        "area4 . area3";
+        /* . ou ... define uma área em branco no grid */
+    grid-gap: 10px;
+}
+
+.box {
+    color: #ffffff;
+    border-radius: 10px;
+}
+
+.box1 {
+    grid-area: area1;
+    background-color: blue;
+}
+
+.box2 {
+    grid-area: area2;
+    background-color: rgb(175, 173, 36);
+}
+
+.box3 {
+    grid-area: area3;
+    background-color: rgb(66, 189, 93);
+}
+
+.box4 {
+    grid-area: area4;
+    background-color: rgb(255, 81, 0);
+}
