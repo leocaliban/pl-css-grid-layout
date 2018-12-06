@@ -1,0 +1,44 @@
+body {
+    text-align: center;
+}
+
+div * {
+    border: solid 3px #000000;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(12, 7%);
+    grid-template-rows: repeat(10, 4vh);
+    grid-gap: 10px calc((100% - 7%*12) / 11);
+    border: dotted 1px #000000;
+}
+
+.box {
+    color: #ffffff;
+    border-radius: 10px;
+}
+
+.box1 {
+    background-color: blue;
+}
+
+.box2 {
+    background-color: rgb(175, 173, 36);
+}
+
+.box3 {
+    background-color: rgb(66, 189, 93);
+}
+
+.box4 {
+    background-color: rgb(255, 81, 0);
+}
+
+.box5 {
+    background-color: rgb(206, 64, 118);
+}
+
+.box6 {
+    background-color: rgb(58, 58, 70);
+}
