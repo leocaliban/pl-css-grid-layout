@@ -1,0 +1,40 @@
+body {
+    text-align: center;
+}
+
+div * {
+    border: solid 3px #000000;
+}
+
+/* GRID 2X3 */
+.container {
+    display: grid;
+    grid-template-columns: 200px minmax(400px, 800px);
+    grid-template-rows: 50px minmax(200px, auto) 50px;
+    grid-gap: 10px 20px;
+    border: dotted 1px #000000;
+}
+
+.header {
+    background-color: rgb(25, 121, 165);
+}
+
+.menu {
+    background-color: rgb(175, 173, 36);
+}
+
+.content {
+    background-color: rgb(66, 189, 93);
+}
+
+.lateral-um {
+    background-color: rgb(238, 128, 77);
+}
+
+.lateral-dois {
+    background-color: rgb(204, 82, 129);
+}
+
+.footer {
+    background-color: rgb(165, 109, 25);
+}

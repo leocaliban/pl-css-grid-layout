@@ -1,0 +1,44 @@
+body {
+    text-align: center;
+}
+
+div * {
+    border: solid 3px #000000;
+}
+
+/* GRID 3X3 */
+.container {
+    display: grid;
+    grid-template-columns: 200px minmax(400px, 1fr) 200px;
+    grid-template-rows: 50px minmax(200px, auto) 50px;
+    grid-gap: 10px 20px;
+    border: dotted 1px #000000;
+}
+
+.header {
+    grid-area: 1 / 1 / 2 / 4;
+    background-color: rgb(25, 121, 165);
+}
+
+.menu {
+    display: none;
+    background-color: rgb(175, 173, 36);
+}
+
+.content {
+    grid-area: 2 / 2 / 3 / 3;
+    background-color: rgb(66, 189, 93);
+}
+
+.lateral-um {
+    background-color: rgb(238, 128, 77);
+}
+
+.lateral-dois {
+    background-color: rgb(204, 82, 129);
+}
+
+.footer {
+    grid-area: 3 / 1 / 4 / 4;
+    background-color: rgb(165, 109, 25);
+}
