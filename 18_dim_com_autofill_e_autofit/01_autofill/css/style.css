@@ -1,0 +1,60 @@
+body {
+    text-align: center;
+}
+
+div * {
+    border: solid 3px #000000;
+}
+
+.container {
+    display: grid;
+    /* 4 colunas com largura fixa de 100px */
+    grid-template-columns: repeat(4, 100px);
+    /* 1 linha com largura fixa de 60px */
+    grid-template-rows: 60px;
+    grid-gap: 10px 20px;
+    border: dotted 1px #000000;
+}
+
+.container2 {
+    display: grid;
+    /* auto-fill aplicado para não haver overflow */
+	grid-template-columns: repeat(auto-fill, 100px);
+	grid-template-rows: 60px;
+    grid-gap: 10px 20px;
+    grid-auto-rows: 60px;
+    border: dotted 1px #000000;
+}
+
+.box {
+    color: #ffffff;
+    border-radius: 10px;
+}
+
+.box1 {
+    background-color: blue;
+}
+
+.box2 {
+    background-color: rgb(175, 173, 36);
+}
+
+.box3 {
+    background-color: rgb(66, 189, 93);
+}
+
+.box4 {
+    background-color: rgb(255, 81, 0);
+}
+
+.box5 {
+    background-color: rgb(206, 64, 118);
+}
+
+.box6 {
+    background-color: rgb(58, 58, 70);
+}
+
+.box7 {
+    background-color: rgb(109, 109, 196);
+}
