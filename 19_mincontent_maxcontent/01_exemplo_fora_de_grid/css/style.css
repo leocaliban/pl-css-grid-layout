@@ -1,0 +1,21 @@
+div {
+    overflow: auto;
+    border: solid 1px #000000;
+}
+
+.t1 {
+    width: 250px;
+}
+
+.t2 {
+    width: min-content;
+}
+
+.t3 {
+    width: max-content;
+}
+
+img {
+    width: 300px;
+    height: 300px;
+}
