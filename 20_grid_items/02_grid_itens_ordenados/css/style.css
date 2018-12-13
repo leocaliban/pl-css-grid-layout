@@ -1,0 +1,50 @@
+.container, .container2 {
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px;
+    grid-template-rows: 60px 60px;
+    grid-gap: 10px;
+    margin-bottom: 20px;
+}
+
+div {
+    border: solid 1px #000000;
+}
+
+.box{
+    color: #ffffff;
+    text-align: center;
+    border: 1px solid #c5c2c2;
+    border-radius: 10px;
+}
+
+.box1 {
+    background-color: blue;
+}
+
+.box2 {
+    background-color: rgb(175, 173, 36);
+}
+
+.box3 {
+    background-color: rgb(66, 189, 93);
+}
+
+.box4 {
+    background-color: rgb(255, 81, 0);
+}
+
+.container2 > .box1{
+    order: 4;
+}
+
+.container2 > .box2{
+    order: 3;
+}
+
+.container2 > .box3{
+    order: 2;
+}
+
+.container2 > .box4{
+    order: 1;
+}

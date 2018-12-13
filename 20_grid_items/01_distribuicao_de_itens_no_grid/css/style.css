@@ -1,0 +1,19 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 90px 90px;
+    grid-gap: 10px;
+    
+}
+
+div * {
+    border: solid 1px #000000;
+}
+
+.em{
+    display: block;
+}
+
+.float{
+    float: right;
+}

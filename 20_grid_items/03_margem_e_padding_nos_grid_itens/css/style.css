@@ -1,0 +1,28 @@
+.container, .container2 {
+    display: grid;
+    grid-template-columns: 350px 350px;
+    grid-template-rows: auto;
+}
+
+div {
+    border: solid 1px #000000;
+}
+
+.box {
+    color: #ffffff;
+    text-align: center;
+    border: 1px solid #c5c2c2;
+    border-radius: 10px;
+}
+
+.box1 {
+    background-color: blue;
+    margin: 20px 30px 10px 0;
+    padding: 10px 20px 0 0;
+}
+
+.box2 {
+    background-color: rgb(175, 173, 36);
+    margin: 30px 10px 10px 50px;
+    padding: 20px 40px 0 30px;
+}
