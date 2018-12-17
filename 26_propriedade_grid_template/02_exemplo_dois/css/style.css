@@ -1,0 +1,50 @@
+body {
+  font: 2rem sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template:
+    "topo topo topo" 90px /* <-- altura das linhas */
+    "menu conteudo lateral" 40vh /* <-- altura das linhas */
+    "footer footer footer" 120px /* <-- altura das linhas */ / 200px 1fr 200px; /* <-- largura das colunas*/
+  grid-gap: 2px;
+  padding: 20px;
+}
+
+div {
+  border: dotted 1px #000000;
+}
+
+.box {
+  color: #ffffff;
+  text-align: center;
+  border: 2px solid #252525;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.header {
+  grid-area: topo;
+  background-color: rgb(25, 121, 165);
+}
+
+.menu {
+  grid-area: menu;
+  background-color: rgb(175, 173, 36);
+}
+
+.content {
+  grid-area: conteudo;
+  background-color: rgb(66, 189, 93);
+}
+
+.lateral {
+  grid-area: lateral;
+  background-color: rgb(204, 82, 129);
+}
+
+.footer {
+  grid-area: footer;
+  background-color: rgb(165, 109, 25);
+}
