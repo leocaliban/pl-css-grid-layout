@@ -1,0 +1,35 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  font: normal 16px/1.4 sans-serif;
+  background: #fcfcfc;
+  color: #454545;
+  margin: 0 0.1875em;
+}
+.topo {
+  background: #6a8da6;
+  color: #fff;
+}
+nav {
+  background-color: #304452;
+  color: #fff;
+}
+.banner {
+  background: #001a54;
+  color: #fff;
+  margin: 0.3125em 0;
+}
+.rodape {
+  background: #353b40;
+  color: #aaa;
+}
+.barra-inferior {
+  background: #2e2e2e;
+  color: #fff;
+}
