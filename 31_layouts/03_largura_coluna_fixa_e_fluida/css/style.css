@@ -1,0 +1,30 @@
+.container > * {
+  background-color: #4aa1c9;
+  color: #ffffff;
+  padding: 10px 20px;
+  margin-bottom: 1px;
+}
+
+@media all and (min-width: 30em) {
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 60px auto 100px;
+    grid-gap: 1px;
+  }
+  .topo,
+  .rodape {
+    grid-column: 1 / 3;
+  }
+  .principal {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .auxiliar {
+    grid-column: 1;
+    grid-row: 2;
+  }
+}

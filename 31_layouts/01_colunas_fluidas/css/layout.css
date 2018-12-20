@@ -1,0 +1,29 @@
+﻿html {
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+body {
+	font: 16px/1.4 sans-serif;
+	background: #fff;
+	color: #333;
+	margin: 0;
+	}
+.descricao {
+	margin: 10px 0;
+}
+.descricao > span {
+	display: inline-block;
+	padding: 1px 5px;
+	background: #deeef5;
+	color: #666;
+	border: 1px solid #2f6680;
+	border-radius: 4px;
+	margin: 0 5px 5px 0;
+	font-size: 90%;
+}
+h1 { font-size: 1.6em; }
+h2 { font-size: 1.4em; }
+h3 { font-size: 1.2em; }
+h1, h2, h3, p { margin: 0 0 5px 0; }
