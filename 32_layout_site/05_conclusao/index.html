@@ -1,0 +1,441 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Livro CSS Grid Layout do Maujor</title>
+<link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css">
+<style rel="stylesheet">
+html {box-sizing: border-box;}
+*, *:before, *:after { box-sizing: inherit;}
+body {
+	font:  normal 16px/1.4  sans-serif;
+	background: #fcfcfc;
+	color: #454545;
+	margin: 0 0.1875em; 
+}
+.topo { 
+	background: #6a8da6; 
+	color: #fff; 
+	}
+nav { background-color: #304452; color: #fff; }
+main >  h1 { 
+	background-color: #6a8da6; 
+	color: #fff;
+	font-size: 1em;
+	margin: 0;
+    text-align: center;
+}
+article  h1 { font-size: 0.9em; }
+.ultimos-lancamentos > article {  
+	border-bottom: 1px solid #ccc;
+	height: 170px;
+	padding: 15px 0;
+}
+.ultimos-lancamentos figure {
+	float: left;
+	margin-right: 5px;
+}
+.ultimos-lancamentos p {
+	font-size: 80%; 
+	margin: 2px 0;
+}
+img[src*="capa"] { width: 86px; height: 124px; }
+figure { margin: 0;}
+.proximos-lancamentos {
+	display: flex;
+	justify-content: center;
+	border-radius: 8px;
+}
+.proximos-lancamentos > figure { 	margin: auto; }
+.banner {
+	color: #fff;
+	margin: 0.3125em 0;
+	text-align: center;
+}
+.banner img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.ads {text-align: center;}
+.rodape  {
+	background: #353b40;
+	color: #aaa;
+}
+.rodape h3 {
+	margin: 5px 0;
+	font-size: 100%;
+	border-bottom: 1px solid #aaa;
+	padding-left: 5px;
+}
+ul  {
+	list-style: none;
+}
+.rodape ul  {
+	margin: 0 0 0 -35px;
+}
+.rodape ul li  { 
+	margin-bottom: -4px;
+}
+.topo ul, nav ul {
+	margin: 0;
+	padding: 10px 0;
+	display: inline-block;
+}
+.topo ul li, nav ul li {
+	display: inline-block;
+}
+.topo ul li { padding-left: 40px; }
+.topo ul i { font-size: 30px; }
+nav ul:first-of-type li a {
+	padding: 0 10px;
+	border-right: 1px solid #aaa;
+}
+nav ul:first-of-type li:last-child a {
+	border-right: none;
+}
+nav ul:first-of-type li:first-child a {
+	padding-left: 0;
+}
+.busca { 
+	position: relative;
+	width: 100%;
+	max-width: 330px;
+	height: 24px;
+}
+.busca:before {
+	position: absolute;
+	top: 0;
+	right: 3px;
+	width: 24px;
+	height: 34px;
+	line-height: 34px;
+	font-family: 'FontAwesome';
+	content: '\f002';
+	text-align: center;
+	color: #000;
+}
+.input-busca {
+    width: 100%;
+    height: 34px;
+    padding: 0 5px;
+    background: #fff;
+    border: none;
+    color: #666;
+    font-size: 13px;
+}
+.submit-busca {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 34px;
+    opacity: 0;
+    cursor: pointer;
+}
+.rodape a, rodape a:visited,
+.barra-inferior a, .barra-inferior a:visited  {
+	font-size: 90%;
+	text-decoration: none;
+	color: #aaa;
+}
+.topo a, topo a:visited,
+nav a, nav a:visited  {
+	font-size: 90%;
+	text-decoration: none;
+	color: #eee;
+}
+.rodape .sociais li {
+	display: inline-block;
+	margin-top: 20px;
+}
+.barra-inferior {
+	background: #2e2e2e;
+	color: #fff;
+	padding: 5px 0;
+}                      
+.barra-inferior p {
+	margin: 0;
+}
+@media screen and (min-width: 40em) { 
+	.container	 { 
+		display: grid;
+		grid-template-columns:  repeat(8, 1fr);
+		grid-template-rows: 100px  repeat( 6, auto ) ;
+		grid-gap: 0 10px;
+}
+	.topo { grid-column: 1 / -1;}
+	nav { grid-column: 1 / -1;}
+	main { 
+		grid-column: 1 / -1;   grid-row: 4; 
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 25px auto 25px auto;
+		grid-column-gap: 10px;
+		}
+	.ultimos-lancamentos >article h1 { grid-column: 1 / -1; margin: 0;}
+	.ultimos-lancamentos >article { width: 49.333%; height: auto;}
+	.ultimos-lancamentos >article:nth-child(odd) { float: left; }
+	.ultimos-lancamentos >article:nth-child(even) { float: right;}
+	aside { grid-column: 1 / -1;  grid-row: 5;}
+	.barra-inferior { grid-column: 1 / -1; }
+	.topo, nav, .rodape, .barra-inferior { display: flex; justify-content: space-around; }
+	.ads img { width: 32%; margin-bottom: 10px; float: left; }
+	.ad2 img, .ad4 img { margin: 0 2%; }
+	.ad6 img { margin-right: 36%; }
+	.banner { grid-column: 1 / -1; grid-row: 3; }
+	.rodape { grid-column: 1 / -1;}
+	.topo { 
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.busca { 
+		float: right;
+		width: 100%;
+	}
+	.topo ul, nav ul:last-of-type {
+		float: right;
+	}
+	.rodape  {
+		display: flex;
+		justify-content: space-between;
+	}
+}
+@media screen and (min-width: 65em) { 
+	.container	 { 
+		display: grid;
+		grid-template-columns: 1fr repeat(8, 5.28em) repeat(2, 120px) 1fr;
+		grid-template-rows: 100px  repeat( 5, auto );
+	}
+	.topo, nav { grid-column: 1 / span 12; }
+	main { 
+		grid-column: 2 / span 10;   grid-row: 4; 
+		display: grid;
+		width: 750px;
+		grid-template-columns: 1fr;
+		grid-template-rows: 25px auto 25px auto;
+		grid-column-gap: 10px;
+		}
+	.ultimos-lancamentos >article h1 { grid-column: 1 / -1; margin: 0;}
+	.ultimos-lancamentos >article { width: 49.333%; height: auto;}
+	.ultimos-lancamentos >article:nth-child(odd) { float: left; }
+	.ultimos-lancamentos >article:nth-child(even) { float: right;}
+	aside { grid-column: 10 / span 2;  grid-row: 4;}
+	.banner { grid-column: 2 / span 10; grid-row: 3 ;}
+	.rodape { grid-column: 1 / span 12; }
+	.barra-inferior { grid-column: 1 / span 12; }
+	.topo, nav, .rodape, .barra-inferior { display: flex; justify-content: space-around; }
+	.ads img { width: 100%; margin: 0; float: none; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+<header class="topo">
+<h1 class="logo">
+    	<svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" width="121" height="23" viewBox="0 0 121 23" xml:space="preserve" aria-describedby="desc-logo">
+<desc id="desc-logo">Logotipo da Editora Novatec constituido pelos textos nova na cor branca e tec na cor amarela</desc>
+<path fill="#FFF" d="M1.1 10.4c0-2 0-3.6-.1-5.1h3.8L5 7.9C5.7 6.6 7.6 5 10.4 5c3 0 6.1 1.9 6.1 7.3v10.1h-4.3v-9.6c0-2.5-.9-4.3-3.3-4.3C7.2 8.4 6 9.7 5.6 11c-.1.4-.2.9-.2 
+1.4v10H1.1v-12zM37.3 13.7c0 6.3-4.4 9.1-8.8 9.1-4.8 0-8.5-3.3-8.5-8.8 0-5.6 3.7-9 8.8-9 5.1-.1 8.5 3.5 8.5 8.7zm-12.9.2c0 3.3 1.6 5.8 4.2 5.8 2.5 0 4.2-2.4 4.2-5.8 
+0-2.7-1.2-5.7-4.1-5.7-3-.1-4.3 2.8-4.3 5.7zM43.3 5.3L46 14c.5 1.5.8 2.9 1.2 4.3h.1c.3-1.4.7-2.7 1.2-4.3l2.7-8.6h4.6l-6.5 17H45l-6.3-17h4.6zM67.7 22.4l-.3-1.9h-.1c-1.1 
+1.3-2.8 2.3-5 2.3-3.4 0-5.4-2.5-5.4-5.1 0-4.3 3.8-6.5 10.1-6.4V11c0-1.1-.5-3-3.5-3-1.7 0-3.4.5-4.6 1.3l-.8-2.8c1.3-.8 3.5-1.5 6.2-1.5 5.5 0 7 3.5 7 7.2v6.2c0 1.5.1 3 .2 
+4.1h-3.8zm-.6-8.4c-3-.1-6 .6-6 3.2 0 1.7 1.1 2.5 2.5 2.5 1.7 0 3-1.1 3.4-2.3.1-.3.1-.7.1-.9V14z"/>
+<path fill="#FCC400" d="M80.6.5v4.9h4.1v3.2h-4.1v7.5c0 2.1.6 3.2 2.2 3.2.7 0 1.3-.1 1.7-.2l.1 3.3c-.6.2-1.8.4-3.1.4-1.6 0-2.9-.5-3.7-1.4-.9-1-1.3-2.5-1.3-4.8v-8H74V5.3h2.5V1.5l4.1-1z
+M90.8 15.1c.1 3.1 2.5 4.4 5.3 4.4 2 0 3.4-.3 4.7-.8l.6 3c-1.5.6-3.5 1-6 1-5.5 0-8.8-3.4-8.8-8.6 0-4.7 2.9-9.2 8.3-9.2 5.5 0 7.4 4.6 7.4 8.3 0 .8-.1 1.4-.1 
+1.8H90.8zm7.5-3.1c0-1.6-.7-4.2-3.5-4.2-2.7 0-3.8 2.4-4 4.2h7.5zM118.3 21.8c-.9.4-2.7.9-4.8.9-5.3 0-8.8-3.4-8.8-8.7 0-5.1 3.5-9.1 9.5-9.1 1.6 0 
+3.2.3 4.2.8l-.8 3.3c-.7-.3-1.7-.7-3.3-.7-3.3 0-5.3 2.4-5.2 5.5 0 3.5 2.3 5.5 5.2 5.5 1.5 0 2.6-.3 3.4-.7l.6 3.2z"/></svg>
+	</h1>
+	<form action="#" method="#" name="#" class="busca">
+	<input  type="text"  name="palavra" placeholder="Palavra-chave, título, autor ou ISBN" class="input-busca">
+	<button type="submit" name="enviar"  value=" "  class="submit-busca"></button>
+	</form>
+	
+    <ul >
+		<li ><a href="#"><i class="fa fa-sign-in fa-lg" aria-hidden="true"></i><br>Conta</a></li>
+		<li><a href="#"><i class="fa fa-cart-arrow-down fa-lg" aria-hidden="true"></i><br>Carrinho</a></li>
+   </ul>
+</header>
+	
+<nav>
+	<ul>
+    	<li><a href="#">Home</a></li>
+    	<li><a href="#">Catálogo</a></li>
+    	<li><a href="#">Centro de Treinamento</a></li>
+    	<li><a href="#">Seja nosso autor</a></li>
+ 	</ul>       
+        
+	<ul>
+		<li><a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a></li>
+		<li><a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a></li>
+		<li><a href="#"><i class="fa fa-google-plus-square fa-2x" aria-hidden="true"></i></a></li>
+		<li><a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a></li>
+		<li><a href="#"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a></li>
+		<li><a href="#">SK</a></li>
+	</ul>
+</nav>
+
+<main>	
+    <h1>Últimos lançamentos</h1>
+	<section class="ultimos-lancamentos">
+    <article>	
+		<header>
+            <figure>
+                <img src="imagens/capa1.jpg" alt="">
+            </figure>                          
+            <h1>Guia Mangá Fisiologia</h1>
+            <p>Aprenda Fisiologia com a Kumiko, em uma história em quadrinhos divertida e ao mesmo tempo educativa.<br><a href="#">Leia mais...</a></p>
+		</header>
+	</article>           
+            
+	<article>	
+		<header>
+            <figure>
+                <img src="imagens/capa2.jpg" alt="">
+            </figure>                          
+            <h1>Android Essencial com Kotlin</h1>
+            <p>Aprenda a desenvolver aplicativos Android com a nova linguagem Kotlin.<br><a href="#">Leia mais...</a></p>
+		</header>
+	</article>           
+            
+	<article>	
+		<header>
+            <figure>
+                <img src="imagens/capa3.jpg" alt="">
+            </figure>                          
+            <h1>Wireshark para profissionais de segurança</h1>
+            <p>Explore os diversos recursos do Wireshark e torne sua rede mais segura.<br><a href="#">Leia mais...</a></p>
+			 
+		</header>
+	</article>           
+            
+	<article>	
+		<header>
+            <figure>
+                <img src="imagens/capa4.jpg" alt="">
+            </figure>                          
+            <h1>PHP para quem conhece PHP - 5ª Edição</h1>
+            <p>Aprenda os recursos avançados de PHP com Juliano Niederauer, referência nacional em PHP. Atualizado para PHP 7.<br><a href="#">Leia mais...</a></p>
+		</header>
+	</article>           
+            
+	<article>	
+		<header>
+		<figure>
+            <img src="imagens/capa5.jpg" alt="">
+		</figure>                          
+            <h1>Análise de pacotes na prática</h1>
+            <p>Aprenda a utilizar o Wireshark para analisar os pacotes de dados de sua rede.<br><a href="#">Leia mais...</a></p>
+		</header>
+	</article>           
+            
+	<article>	
+		<header>
+		<figure>
+            <img src="imagens/capa6.jpg" alt="">
+		</figure>                          
+            <h1>Gamification em Help Desk e Service Desk</h1>
+            <p>Tudo o que precisa saber para implementar um projeto de Gamification.<br><a href="#">Leia mais...</a></p>
+		</header>
+	</article>           
+            
+	<article>	
+		<header>
+            <figure>
+                <img src="imagens/capa7.jpg" alt="">
+            </figure>                          
+            <h1>Internet das Coisas com ESP8266, Arduino e Raspberry</h1>
+            <p>Desenvolva aplicações IoT com o ESP8266 (compatível com o Arduino), com interfaces web, smartphones e na nuvem.<br><a href="#">Leia mais...</a></p>
+		</header>
+	</article>           
+            
+	<article>	
+		<header>
+            <figure>
+                <img src="imagens/capa8.jpg" alt="">
+            </figure>                          
+            <h1>Introdução ao Varnish Cache</h1>
+            <p>Aumente em até 300x a velocidade de carregamento do seu site.<br><a href="#">Leia mais...</a></p>
+		</header>
+	</article>           
+	</section>
+                
+	<h1>Próximos lançamentos</h1>
+	<section class="proximos-lancamentos">
+		<figure>
+            <img src="imagens/capa9.jpg" alt="">
+            <img src="imagens/capa10.jpg" alt="">
+            <img src="imagens/capa11.jpg" alt="">
+            <img src="imagens/capa12.jpg" alt="">
+            <img src="imagens/capa13.jpg" alt="">
+            <img src="imagens/capa14.jpg" alt="">
+            <img src="imagens/capa15.jpg" alt="">
+		</figure>           
+	</section>
+</main>	
+   
+	<aside>   
+        <div class="ads ad1"><img src="imagens/ad1.jpg" alt=""></div>	    
+        <div class="ads ad2"><img src="imagens/ad2.jpg" alt=""></div>	    
+        <div class="ads ad3"><img src="imagens/ad3.jpg" alt=""></div>	    
+        <div class="ads ad4"><img src="imagens/ad4.jpg" alt=""></div>	    
+        <div class="ads ad5"><img src="imagens/ad5.jpg" alt=""></div>	    
+        <div class="ads ad6"><img src="imagens/placeholder-facebook.jpg" alt=""></div>	    
+        <div class="ads ad7"><img src="imagens/placeholder-twitter.jpg" alt=""></div>	    
+	</aside>
+	
+    <div class="banner"><img src="imagens/banner.jpg" alt=""></div>
+
+    <footer class="rodape">
+    	<section>
+            <h3>Novatec</h3>
+    			<ul>
+     				<li><a href="#">Quem somos</a></li>
+     				<li><a href="#">Seja nosso autor</a></li>
+				</ul>
+				<ul class="sociais">
+					<li><a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-google-plus-square fa-2x" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a></li>
+					<li><a href="#">SK</a></li>
+				</ul>
+		</section>        
+       
+        <section>
+			<h3>Atendimento</h3>
+				<ul>
+					<li><a href="#">Professor</a></li>
+					<li><a href="#">Trabalhe conosco</a></li>
+					<li><a href="#">Fale conosco</a></li>
+				</ul>
+		</section>
+        
+        <section>
+			<h3>Centro de treinamento</h3>
+				<ul>
+					<li><a href="#">Agenda de cursos</a></li>
+					<li><a href="#">Como chegar</a></li>
+					<li><a href="#">Hospedagem</a></li>
+					<li><a href="#">Locação de salas</a></li>
+					<li><a href="#">Seja nosso instrutor</a></li>
+				</ul>
+		</section>
+        
+        <section>    
+			<h3>Suporte</h3>
+				<ul>
+					<li><a href="#">Minha conta</a></li>
+					<li><a href="#">Dúvidas frequentes</a></li>
+					<li><a href="#">Lista de preços</a></li>
+					<li><a href="#">Mais vendidos</a></li>
+				</ul>
+        </section>
+    </footer>    
+	<div class="barra-inferior"><p><a href="#">Política de privacidade</a> | 	<a href="#">Mapa do site</a></p></div>
+</div> <!-- /. container -->
+</body>
+</html>
