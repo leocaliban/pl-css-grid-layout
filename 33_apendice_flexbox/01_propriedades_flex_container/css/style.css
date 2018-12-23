@@ -1,0 +1,45 @@
+body {
+  font: 2rem sans-serif;
+}
+
+.container {
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: space-between;
+}
+
+div {
+  border: dotted 1px #000000;
+}
+
+.box {
+  color: #ffffff;
+  text-align: center;
+  border: 2px solid #252525;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.header {
+  background-color: rgb(25, 121, 165);
+}
+
+.menu {
+  background-color: rgb(175, 173, 36);
+}
+
+.content {
+  background-color: rgb(66, 189, 93);
+}
+
+.lateral {
+  background-color: rgb(204, 82, 129);
+}
+
+.footer {
+  background-color: rgb(165, 109, 25);
+}
