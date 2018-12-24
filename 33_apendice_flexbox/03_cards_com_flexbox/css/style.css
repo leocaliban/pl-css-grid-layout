@@ -1,0 +1,88 @@
+html {
+  box-sizing: border-box;
+  font: 10px sans-serif;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0 0.8rem;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0 0 1rem 0;
+  width: 100%;
+  text-align: center;
+}
+
+ul{
+  list-style: none;
+  margin: 1rem 0;
+  padding: 0;
+  font-size: 1.4rem;
+}
+
+li span{
+  color: red;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+button{
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  color: #ffffff;
+  background: #369;
+  cursor: pointer;
+  font-size: 1.6rem;
+  width: 50%;
+  margin: auto 0 1rem auto;
+}
+
+.container{
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+.produto{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  border: solid 1px #cccccc;
+  border-radius: 1rem;
+  padding: 0.8rem;
+  width: 100%;
+  min-width: 24rem;
+  max-width: 30rem;
+  margin: 0 auto;
+  margin-bottom: 0.8rem;
+}
+
+img{
+  width: 170px;
+  height: 160px;
+}
+
+@media all and (min-width: 35rem){
+  body{
+    margin: 0 auto;
+  }
+
+  .container{
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-flow: row wrap;
+  }
+
+  .produto{
+    max-width: 28rem;
+    margin: 1rem;
+  }
+}
