@@ -1,0 +1,59 @@
+body {
+  font: 2rem sans-serif;
+}
+
+.container-no-basis {
+  max-width: 1200px;
+  display: flex;
+}
+
+.container {
+  max-width: 1200px;
+  display: flex;
+}
+
+.container > :nth-child(1){
+  flex-basis: 100px;
+}
+
+.container > :nth-child(2){
+  flex-basis: 100px;
+}
+
+.container > :nth-child(3){
+  flex-basis: 400px;
+}
+
+.container > :nth-child(4){
+  flex-basis: 600px;
+}
+
+div {
+  border: dotted 1px #000000;
+}
+
+.box {
+  color: #ffffff;
+  text-align: center;
+  border: 2px solid #252525;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.box1 {
+  background-color: blue;
+}
+
+.box2 {
+  background-color: rgb(175, 173, 36);
+}
+
+.box3 {
+  background-color: rgb(66, 189, 93);
+}
+
+.box4 {
+  background-color: rgb(255, 81, 0);
+}
+
+

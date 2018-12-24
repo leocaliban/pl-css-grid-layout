@@ -1,0 +1,42 @@
+body {
+  font: 2rem sans-serif;
+}
+
+.container {
+  display: flex;
+}
+
+div {
+  border: dotted 1px #000000;
+}
+
+.box {
+  color: #ffffff;
+  text-align: center;
+  border: 2px solid #252525;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.box1 {
+  background-color: blue;
+  flex: 2;
+}
+
+.box2 {
+  background-color: rgb(175, 173, 36);
+  flex: 6.5;
+  margin: 0 10px;
+}
+
+.box3 {
+  background-color: rgb(66, 189, 93);
+  flex: 1.5;
+  margin: 0 10px 0 0;
+}
+
+.box4 {
+  background-color: rgb(255, 81, 0);
+}
+
+

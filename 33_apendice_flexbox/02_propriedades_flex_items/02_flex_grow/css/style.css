@@ -1,0 +1,93 @@
+body {
+  font: 2rem sans-serif;
+}
+
+.container-no-grow {
+  max-width: 1200px;
+  display: flex;
+}
+
+.container {
+  max-width: 1200px;
+  display: flex;
+}
+
+.container > :nth-child(1){
+  width: 200px;
+  flex-grow: 1;
+}
+
+.container > :nth-child(2){
+  width: 200px;
+  flex-grow: 3;
+}
+
+.container > :nth-child(3){
+  width: 200px;
+  flex-grow: 2;
+}
+
+.container > :nth-child(4){
+  width: 200px;
+  flex-grow: 5;
+}
+
+div {
+  border: dotted 1px #000000;
+}
+
+.box {
+  color: #ffffff;
+  text-align: center;
+  border: 2px solid #252525;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.box1 {
+  background-color: blue;
+}
+
+.box2 {
+  background-color: rgb(175, 173, 36);
+}
+
+.box3 {
+  background-color: rgb(66, 189, 93);
+}
+
+.box4 {
+  background-color: rgb(255, 81, 0);
+}
+
+.box5 {
+  background-color: rgb(206, 64, 118);
+}
+
+.box6 {
+  background-color: rgb(58, 58, 70);
+}
+
+ul{
+  display: flex;
+}
+
+ul li {
+  list-style: none;
+}
+
+div>.container{
+  height: 200px;
+}
+
+ul > :nth-child(2) {order: 20;}
+ul > :nth-child(1) {order: 2;}
+ul > :nth-child(3) {order: 5;}
+
+.container2{
+  display: flex;
+  height: 200px;
+}
+.container2 :nth-child(2){
+  align-self: center;
+}
